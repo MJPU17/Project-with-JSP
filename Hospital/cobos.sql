@@ -1,0 +1,24 @@
+CREATE DATABASE urregoJuan;
+
+USE urregoJuan;
+
+CREATE TABLE patient(
+id INT PRIMARY KEY AUTO_INCREMENT,
+pname VARCHAR(100) NOT NULL,
+birthday DATE NOT NULL,
+document BIGINT UNIQUE NOT NULL,
+nacionality VARCHAR(100) NOT NULL,
+congestedplaces VARCHAR(1000),
+infectedbyme VARCHAR(1000)
+);
+
+CREATE TABLE disease(
+id INT PRIMARY KEY AUTO_INCREMENT,
+document BIGINT NOT NULL,
+dname VARCHAR(100) NOT NULL,
+cause VARCHAR(1000) NOT NULL,
+severity INT NOT NULL
+);
+
+SELECT *FROM patient;
+SELECT *FROM disease;
